@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curent day</title>
+    <style>
+        h3,
+        h4 {
+            color: blue;
+            margin: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 id="demo"></h3>
+    <h4 id="demo1"></h4>
+</body>
+<script>
+    // for day------------------------------------------------------------------
+    var day;
+
+
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+    }
+    document.querySelector("#demo").innerHTML = "Today is " + day;
+    // for date-----------------------------------------------------------------------------
+    function cdate() {
+        var now = new Date();
+        var curent = now.toLocaleString();
+        document.querySelector("#demo1").innerHTML = "Curent time is- " + curent;
+    }
+    setInterval(cdate, 1000);
+
+</script>
+
+</html>
